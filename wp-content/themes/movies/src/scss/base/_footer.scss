@@ -1,0 +1,99 @@
+@use "../global/variables" as *;
+@use "../global/functions" as *;
+@use "../global/mixins" as *;
+@use "sass:math";
+
+.footer {
+    @include flex_center;
+    padding: rem(64) 0 rem(32);
+    width: 100%;
+    background-color: var(--secondary-color);
+    border-top: rem(2) solid var(--primary-color);
+
+    .footer-container {
+        @include flex_center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .img-wrapper {
+        @include flex_center;
+        width: 100%;
+        max-width: rem(120);
+
+        @media screen and (min-width: $tablet) {
+            max-width: rem(180);
+        }
+    }
+
+    picture {
+        width: 100%;
+    }
+
+    .navigation-wrapper {
+        width: 100%;
+
+        .menu-wrapper {
+            width: 100%;
+        }
+
+        .menu-list {
+            @include flex_center;
+            width: 100%;
+            flex-direction: column;
+
+            @media screen and (min-width: $tablet) {
+                align-items: flex-start;
+            }
+        }
+
+        li {
+            &.menu-item {
+                text-align: center;
+                width: auto;
+                margin-top: rem(32);
+            }
+
+            a {
+                color: $white;
+
+                &:hover,
+                &:focus {
+                    color: var(--primary-color);
+
+                    &::before,
+                    &::after {
+                        content: none;
+                    }
+                }
+
+                &::before,
+                &::after {
+                    content: none;
+                }
+            }
+
+            &.current-menu-item {
+                a {
+                    color: var(--primary-color);
+                }
+            }
+        }
+    }
+
+    .copyright-wrapper {
+        @include flex_center;
+        width: 100%;
+        flex-direction: column;
+        margin-top: rem(36);
+        padding-top: rem(24);
+        gap: rem(24);
+        border-top: rem(2) solid var(--primary-color);
+        color: $white;
+
+        @media screen and (min-width: $tablet) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}

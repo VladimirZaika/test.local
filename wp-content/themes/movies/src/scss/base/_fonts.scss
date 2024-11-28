@@ -1,0 +1,35 @@
+@use "sass:math";
+
+@font-face {
+	font-display: swap;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/wp-content/themes/movies/fonts/roboto/Roboto-Regular.woff2') format('woff2'),
+		url('/wp-content/themes/movies/fonts/roboto/Roboto-Regular.woff') format('woff'),
+		url('/wp-content/themes/movies/fonts/roboto/Roboto-Regular.ttf') format('truetype'),
+		url('/wp-content/themes/movies/fonts/roboto/Roboto-Regular.otf') format('opentype');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 500;
+	src: url('/wp-content/themes/movies/fonts/roboto/Roboto-Medium.woff2') format('woff2'),
+		url('/wp-content/themes/movies/fonts/roboto/Roboto-Medium.woff') format('woff'),
+		url('/wp-content/themes/movies/fonts/roboto/Roboto-Medium.ttf') format('truetype'),
+		url('/wp-content/themes/movies/fonts/roboto/Roboto-Medium.otf') format('opentype');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 700;
+	src: url('/wp-content/themes/movies/fonts/roboto/Roboto-Bold.woff2') format('woff2'),
+		url('/wp-content/themes/movies/fonts/roboto/Roboto-Bold.woff') format('woff'),
+		url('/wp-content/themes/movies/fonts/roboto/Roboto-Bold.ttf') format('truetype'),
+		url('/wp-content/themes/movies/fonts/roboto/Roboto-Bold.otf') format('opentype');
+}
+

@@ -1,0 +1,117 @@
+{
+    "key": "group_673f6aa434c46",
+    "title": "[POST][Movies]: Content",
+    "fields": [
+        {
+            "key": "field_673f7037642fa",
+            "label": "Movie Data",
+            "name": "movie_data",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "If you chose to get the data from imdb fill in the Movie ID field only and save or publish the post.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "Get from imdb",
+            "ui_off_text": "Custom",
+            "ui": 1
+        },
+        {
+            "key": "field_673f70bb642fb",
+            "label": "Movie ID",
+            "name": "movie_id",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_673f7037642fa",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "51",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "tt0050083",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_673f701b642f9",
+            "label": "Rating",
+            "name": "rating",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "From 1 to 10",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_673f6aa5642f7",
+            "label": "Release Date",
+            "name": "release_date",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "Year",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "movies"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1732299545
+}

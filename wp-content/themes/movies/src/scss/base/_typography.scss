@@ -1,0 +1,157 @@
+@use "../global/variables" as *;
+@use "../global/functions" as *;
+@use "../global/mixins" as *;
+@use "sass:math";
+
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	color: var(--secondary-color);
+	font-weight: 700;
+	line-height: normal;
+    margin-bottom: rem(20);
+
+    @media screen and (min-width: $tablet-landscape) {
+        margin-bottom: rem(36);
+    }
+}
+
+.h1,
+h1 {
+	font-size: rem(34);
+
+	@media screen and (min-width: $tablet-landscape) {
+		font-size: rem(48);
+    }
+}
+
+.h2,
+h2 {
+	font-size: rem(28);
+
+	@media screen and (min-width: $tablet-landscape) {
+		font-size: rem(40);
+    }
+}
+
+.h3,
+h3 {
+	font-size: rem(28);
+
+	@media screen and (min-width: $tablet-landscape) {
+		font-size: rem(38);
+    }
+}
+
+.h4,
+h4 {
+	font-size: rem(28);
+	line-height: 130%;
+
+	@media screen and (min-width: $tablet-landscape) {
+		font-size: rem(36);
+		line-height: normal;
+    }
+}
+
+.h5,
+h5 {
+	font-size: rem(24);
+}
+
+// Eyebrow
+.h6,
+h6 {
+	font-size: rem(14);
+	font-weight: 500;
+	padding: rem(4) rem(16);
+	display: block;
+	border-radius: rem(40);
+	border: rem(1) solid var(--primary-color);
+	text-align: center;
+
+	@media screen and (min-width: $tablet-landscape) {
+		padding-left: rem(16);
+		padding-right: rem(16);
+		font-size: rem(14);
+	}
+}
+
+p,
+span,
+a {
+    font-weight: 400;
+    line-height: rem(19);
+    font-size: rem(16);
+
+    @media screen and (min-width: $tablet-landscape) {
+        font-size: rem(18);
+        line-height: rem(21);
+    }
+}
+
+p,
+span {
+    color: inherit;
+}
+
+strong {
+    color: var(--text-color-2);
+}
+
+.text {
+    &-small {
+        font-size: rem(14);
+        line-height: rem(21);
+    }
+
+    &-small {
+        p,
+        span {
+            font-weight: inherit;
+            line-height: inherit;
+            color: inherit;
+            font-size: inherit;
+        }
+    }
+}
+
+.medium {
+    font-weight: 500;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.light-gray-color {
+    color: var(--text-color);
+}
+
+.dark-color {
+    color: var(--text-color-2);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-decor {
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    font-family: inherit;
+    color: var(--primary-color);
+}

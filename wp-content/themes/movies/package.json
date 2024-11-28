@@ -1,0 +1,32 @@
+{
+    "name": "movies",
+    "version": "1.0.0",
+    "description": "Simplified WordPress starter theme.",
+    "main": "index.js",
+    "scripts": {
+        "watch": "gulp --gulpfile ./gulpfile.mjs watch",
+        "build": "gulp --gulpfile ./gulpfile.mjs build",
+        "build:dev": "gulp --gulpfile ./gulpfile.mjs buildDevTask",
+        "build:prod": "gulp --gulpfile ./gulpfile.mjs buildProdTask"
+    },
+    "type": "module",
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.26.0",
+        "@babel/preset-env": "^7.26.0",
+        "@rollup/plugin-babel": "^6.0.4",
+        "@rollup/plugin-commonjs": "^28.0.1",
+        "@rollup/plugin-node-resolve": "^15.3.0",
+        "gulp": "^5.0.0",
+        "gulp-autoprefixer": "^9.0.0",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-cli": "^2.3.0",
+        "gulp-plumber": "^1.2.1",
+        "gulp-sass": "^5.1.0",
+        "gulp-sourcemaps": "^3.0.0",
+        "rollup": "^4.27.3",
+        "sass": "^1.81.0"
+    }
+}

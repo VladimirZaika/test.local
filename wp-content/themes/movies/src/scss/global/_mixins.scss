@@ -1,0 +1,14 @@
+@use "variables" as *;
+@use "functions" as *;
+@use "sass:math";
+
+@mixin icon($code) {
+	content: "#{$code}";
+	font-family: $icon-font-family;
+}
+
+@mixin flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
