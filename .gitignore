@@ -39,7 +39,7 @@
 /*.bk
 /build.txt
 /.idea
-node_modules/
+/wp-content/themes/movies/node_modules/
 
 # All plugins
 #
