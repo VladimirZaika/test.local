@@ -33,12 +33,6 @@
                 alt="Placeholder Image"
             />
         <?php endif;
-        
-        if ( !empty($link) ): ?>
-            <div class="movie-card-link-wrapper">
-                <a href="<?php echo $link ?>" aria-label="<?php echo $title; ?>"><?php echo $title; ?></a>
-            </div>
-        <?php endif;
 
         get_template_part( 'template-parts/rating', 'block', $imgRatingArgs ); ?>
     </div>
