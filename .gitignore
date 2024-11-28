@@ -40,6 +40,7 @@
 /build.txt
 /.idea
 /wp-content/themes/movies/node_modules/
+/wp-content/themes/movies/package-lock.json
 
 # All plugins
 #
