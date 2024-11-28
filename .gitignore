@@ -39,6 +39,7 @@
 /*.bk
 /build.txt
 /.idea
+node_modules/
 
 # All plugins
 #
