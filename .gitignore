@@ -5,35 +5,40 @@
 #
 # Note: if you want to stage/commit WP core files
 # you can delete this whole section/until Configuration.
-/wp-admin/
-/wp-content/index.php
-/wp-content/languages
-/wp-content/plugins/index.php
-/wp-content/themes/index.php
-/wp-includes/
-/index.php
-/license.txt
+/*.log
+/wp-config.php
+/wp-content/cache
+/wp-content/mu-plugins
+/wp-content/uploads
+/source-old-site
+/index.html
+/.well-known
+/error_log
+/google*.html
+/sucuri-*.php
+/wordfence-waf.php
+/wp-content/wflogs
+/wp-content/*.log
+/wp-content/wp-rocket-config
+/wp-content/updraft
+/wp-content/ai1wm-backups
+/wp-content/advanced-cache.php
 /readme.html
-/wp-*.php
-/xmlrpc.php
-
-# Configuration
-wp-config.php
-
-# Example themes
-/wp-content/themes/twenty*/
-
-# Example plugin
-/wp-content/plugins/hello.php
-
-# Uploads
-/wp-content/uploads/
-
-# Log files
-*.log
-
-# htaccess
+/license.txt
+/wp-config-sample.php
+/robots.txt
+*error_log
 /.htaccess
+/*.tar.gz
+/var
+/apache
+/app
+/docker-compose.yml
+/wordpress
+/.well-known
+/*.bk
+/build.txt
+/.idea
 
 # All plugins
 #
