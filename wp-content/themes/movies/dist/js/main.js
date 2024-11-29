@@ -363,7 +363,7 @@
             errorMarkupWrap.classList.add('movie-error-wrapper');
             var errorMarkup = document.createElement('span');
             errorMarkup.classList.add('movie-error-text');
-            errorMarkup.textContent = jsonData.message  ? jsonData.message : 'Films not found';
+            errorMarkup.textContent = jsonData.message ? jsonData.message : 'Films not found';
             errorMarkupWrap.appendChild(errorMarkup);
             form.appendChild(errorMarkupWrap);
             var errors = document.querySelectorAll('.movie-error-wrapper');

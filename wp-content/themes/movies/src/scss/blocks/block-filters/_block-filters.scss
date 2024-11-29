@@ -278,7 +278,7 @@
         }
     }
 
-    .card-title-wrapper
+    .card-title-wrapper,
     .card-btn-wrapper {
         @include flex_center;
         width: 100%;

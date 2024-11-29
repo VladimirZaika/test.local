@@ -16,6 +16,7 @@ function movie_dynamic_styles() {
     $wpData = [
         'ajaxUrl' => admin_url('admin-ajax.php'),
         'restPath' => home_url('/wp-json/movies/v1/'),
+        'nonce' => MovieRequest::get_nonce(),
     ];
 
     wp_localize_script( 'movies-scripts', 'wpData', $wpData );

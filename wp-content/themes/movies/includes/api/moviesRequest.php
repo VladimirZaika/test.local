@@ -14,6 +14,10 @@ class MovieRequest {
         });
     }
 
+    public static function get_nonce() {
+        return wp_create_nonce('movies-request-security');
+    }
+
     public static function rest(WP_REST_Request $request) {
         $params = $request->get_params();
         $response = self::handle_request($params);
@@ -23,6 +27,10 @@ class MovieRequest {
     }
 
     public static function ajax() {
+        if ( !isset($_GET['nonce']) || !wp_verify_nonce($_GET['nonce'], 'movies-request-security') ) {
+            die( '<div class="movie-error-wrapper"><span class="movie-error-text">Permissions check failed.</span></div>' );
+        }
+
         $params = $_GET;
         $response = self::handle_request($params);
         $renderMarkup = self::render($response);
@@ -57,7 +65,7 @@ class MovieRequest {
         $getPage = $params['movie_page'] ?? 1;
         $getSort = $params['movie_sort'] ?? null;
         $getSearch = $params['movie_search'] ?? '';
-        $postsPerPage = $params['posts_per_page'] ?? 12;
+        $postsPerPage = $params['posts_per_page'] ?? 6;
 
         if (!empty($getSearch)) {
             $getPage = 1;

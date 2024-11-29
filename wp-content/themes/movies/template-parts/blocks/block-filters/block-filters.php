@@ -12,7 +12,7 @@ else:
     $sectionClass = get_field('filters_class') ? ' '.get_field('filters_class') : '';
     $bgc = get_field('filters_bgc') ? 'background-color: ' . get_field('filters_bgc') . ';' : false;
     $background = $bgc ? 'style="' . $bgc . '"' : false;
-    $postsPerPage = get_field('filters_posts_per_page') ?? 12;
+    $postsPerPage = get_field('filters_posts_per_page') ?? 6;
     $dataRequest = get_field('filters_data_request') ? 'rest' : 'ajax';
     $currentUrl = ( is_ssl() ? 'https://' : 'http://' ) . $_SERVER['HTTP_HOST'];
 
@@ -91,6 +91,7 @@ else:
     ];
     
     $response = MovieRequest::handle_request( $params );
+    $nonce = MovieRequest::get_nonce() ?? '';
 ?>
 
     <section
@@ -136,6 +137,14 @@ else:
                             type="hidden"
                             name="posts_per_page"
                             value="<?php echo $postsPerPage; ?>"
+                        >
+
+                        <input
+                            class="input input-hidden input-hidden-nonce"
+                            id="input-hidden-nonce"
+                            type="hidden"
+                            name="nonce"
+                            value="<?php echo $nonce; ?>"
                         >
 
                         <div class="button-preloader-wrap button-preloader-wrap-search">
